@@ -1,0 +1,234 @@
+
+
+.jumbotron {
+    font-size: 20px;
+    padding: 60px;
+    background-color: brown;
+    text-align: center;
+    color: white;
+    font: 1em sans-serif;
+
+}
+
+/* Bagian Navigasi */
+nav {
+    
+    display: flex;
+    background-color:rgb(113, 30, 30);
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    color: white;
+}
+
+nav .logo {
+    font-family: 'MonteCarlo', cursive;
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    color: rgb(179, 179, 179);
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+nav ul li a:hover{
+    color: white;
+}
+
+/* Hamburger Menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 42px;
+    height: 28px;
+    left: -7px;
+    top: -3px;
+    opacity:0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color:rgb(255, 255, 255); 
+    border-radius: 3px;
+    transition: all 0.1s;
+}
+
+/* hamburger menu animasi */
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px,-1px);
+}
+
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px ,0);
+}
+
+/* uuran tablet */
+@media screen and (max-width:768px) {
+    nav ul{
+        width: 50%;
+    }   
+}
+
+/* ukuran hp */
+@media screen and (max-width:576px) {
+    .menu-toggle{
+        display: flex;
+    }
+       nav ul{
+          position: absolute;
+          right: 0;
+          top:50%;
+          width: 30%;
+          height: 30%;
+          
+          flex-direction: column;
+          justify-content: space-evenly;
+          z-index: 1;
+          color: white;
+          background-color: rgb(113, 30, 30);
+          transform: translateX(100%);
+          transition: all 1s;
+       } 
+   nav ul.slide {
+        transform: translateX(0);
+    }
+
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+ }
+
+ h2 {
+     color: brown;
+ }
+
+ h3{
+     font:bold;
+ }
+
+
+header {
+    display: inline;
+}
+
+.profile header {
+    text-align: center;
+}
+
+.profile img { 
+    
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.imgright {
+    text-align: center;
+    float: right;
+    width: 30%;
+    padding-top: 15px;
+}
+
+.card {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,0.25)!important;
+    border-radius: .25rem!important;
+    padding: 20px;
+    margin-top: 30px;
+    
+}
+
+.border-top{
+   border-top:  1px solid #dee2e6!important;
+
+}
+
+
+.container {
+    flex-direction: column;
+    display: flex;
+    padding: 20px;
+    width: auto;
+    height: auto;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,0.25)!important;
+    border-radius: .25rem!important;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+.box {
+    flex-grow: 1;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.content {
+    float: left;
+    width: 70%;
+}
+
+aside{
+    float: right;
+    width: 30%;
+    padding-left: 30px;
+    margin-top: -30px;
+}
+
+main {
+    padding: 50px;
+    overflow: auto;
+}
+
+ footer {
+    padding: 20px;
+    color: white;
+    background-color: brown;
+    text-align: center;
+    font-weight: bold;
+ }
+
+ * {
+     box-sizing: border-box;
+ }
+
+
+
+
+ 
